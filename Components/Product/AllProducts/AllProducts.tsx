@@ -7,6 +7,6 @@ type Products = {
 /**
  * This is main Products of the come-fast
  */
-const Products: React.FC<Products> = ({ children }) => <>{children}</>;
+const AllProducts: React.FC<Products> = ({ children }) => <>{children}</>;
 
-export default Products;
+export default AllProducts;

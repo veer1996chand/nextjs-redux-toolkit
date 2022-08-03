@@ -5,7 +5,7 @@ const Header: NextPage = () => {
     <nav className="flex sm:justify-center space-x-4">
       {[
         ['Home', '/'],
-        ['Products', '/AllProduct'],
+        ['Products', '/Products'],
         ['About', '/About'],
       ].map(([title, url], index) => (
         <Link

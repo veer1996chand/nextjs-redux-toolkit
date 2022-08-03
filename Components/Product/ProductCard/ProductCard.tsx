@@ -1,10 +1,11 @@
 import { Card, Col, Row, Button, Text } from '@nextui-org/react';
+import Link from 'next/link';
 import { ProductInterface } from '../Utils/Interface';
 
 export const ProductCard = (props: ProductInterface) => {
   const { id, title, thumbnailUrl, albumId } = props || {};
   return (
-    <Card css={{ w: '100%', h: '400px' }} key={albumId}>
+    <Card css={{ w: '99%', h: '400px' }} key={albumId}>
       <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
         <Col>
           <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
@@ -37,24 +38,29 @@ export const ProductCard = (props: ProductInterface) => {
         <Row>
           <Col>
             <Text color="#000" size={12}>
-              Available soon.
+              Price
             </Text>
             <Text color="#000" size={12}>
-              Get notified.
+              {id + 10}&#8377;
             </Text>
           </Col>
           <Col>
             <Row justify="flex-end">
-              <Button flat auto rounded color="secondary">
+              <Link
+                href={{
+                  pathname: '/Products/[product]',
+                  query: { product: id },
+                }}
+              >
                 <Text
                   css={{ color: 'inherit' }}
                   size={12}
                   weight="bold"
                   transform="uppercase"
                 >
-                  Notify Me
+                  Buy Now
                 </Text>
-              </Button>
+              </Link>
             </Row>
           </Col>
         </Row>

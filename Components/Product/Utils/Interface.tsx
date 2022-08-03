@@ -1,6 +1,6 @@
 // Product sort details
 export interface ProductInterface {
-  id: number;
+  readonly id: number;
   name: string;
   title: string;
   thumbnailUrl: string;
